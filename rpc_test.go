@@ -159,8 +159,9 @@ func TestMainRPC(t *testing.T) {
 	errorCheckRPC(t, body, err, line)
 
 	// list client's dataports
-	options := []interface{}{"dataport"}
-	body, err = Listing(cik, options)
+	types := []interface{}{"dataport"}
+	options := []interface{}{}
+	body, err = Listing(cik, types, options)
 	_, _, line, _ = runtime.Caller(0)
 	errorCheckRPC(t, body, err, line)
 

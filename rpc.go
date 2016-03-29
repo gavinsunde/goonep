@@ -166,9 +166,10 @@ func Info(auth interface{}, rid interface{}, options interface{}) (Response, err
 	return Call(auth, "info", arguments)
 }
 
-func Listing(auth interface{}, types interface{}) (Response, error) {
+func Listing(auth interface{}, types interface{}, options interface{}) (Response, error) {
 	var arguments = []interface{}{
 		types,
+		options,
 	}
 	return Call(auth, "listing", arguments)
 }
